@@ -2,9 +2,13 @@ class MoviesController < ApplicationController
 	def index
 	end
 
-	def new
+	def create
+		@name = params[:name]
+		redirect_to search_path(@name)
 	end
 
-	def create
+	def search
+		@name = params[:name]
+		@movies = SearchMovie.new(@name)
 	end
 end
