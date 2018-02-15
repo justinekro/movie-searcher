@@ -9,6 +9,6 @@ class SearchMovie
 	end
 
 	def find_movies(movie)
-		Tmdb::Search.movie(movie)
+		Tmdb::Search.movie(movie).results
 	end
 end

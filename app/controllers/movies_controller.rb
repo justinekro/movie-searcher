@@ -9,6 +9,6 @@ class MoviesController < ApplicationController
 
 	def search
 		@name = params[:name]
-		@movies = SearchMovie.new(@name)
+		@movies = SearchMovie.new(@name).perform
 	end
 end

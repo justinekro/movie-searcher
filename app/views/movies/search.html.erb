@@ -1,3 +1,17 @@
 <h1> Result for <%= @name %> </h1>
 
-<%= @movies.first %>
+<table class="table table-striped">
+      <tr>
+      <th>Movie</th>
+      <th>Overview</th>
+
+    </tr>
+
+  <% @movies.each do |movie| %> 
+    <tr>
+    <td> <%= movie.title %> </td>
+    <td> <%= movie.overview %> </td>
+    </tr>
+    <% end %>
+  </table>
+
