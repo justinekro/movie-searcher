@@ -3,13 +3,17 @@
 <table class="table table-striped">
       <tr>
       <th>Movie</th>
+      <th>Director</th>
       <th>Overview</th>
+      <th>Release Date</th>
 
     </tr>
 
   <% @movies.each do |movie| %> 
     <tr>
     <td> <%= movie.title %> </td>
+    <td> <%= movie.director %> </td>
+    <td> <%= movie.release_date %> </td>
     <td> <%= movie.overview %> </td>
     </tr>
     <% end %>
