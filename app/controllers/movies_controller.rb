@@ -3,8 +3,14 @@ class MoviesController < ApplicationController
 	end
 
 	def create
+
 		@name = params[:name]
-		redirect_to search_path(@name)
+		if @name.empty?
+			flash[:error] = "Veuillez renseigner le nom du film"
+			redirect_to root_path
+		else
+			redirect_to search_path(@name)
+		end
 	end
 
 	def search
